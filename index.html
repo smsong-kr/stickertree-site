@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 나의 스티커 나무 (My Sticker Tree) © 2026 smsong-kr. All rights reserved.
+     무단 복제·배포·2차적 저작물 작성을 금합니다 / Unauthorized copying, distribution, or derivative works are prohibited. -->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="copyright" content="© 2026 smsong-kr. All rights reserved." />
+  <!-- 보안: 콘텐츠 보안 정책(같은 출처만 허용, 외부 스크립트 차단). 스프라이트는 data: 이미지 사용 -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; worker-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <title>나의 스티커 나무</title>
+  <meta name="description" content="좋은 일을 할 때마다 스티커를 붙여 성취를 모으는 스티커 모음판" />
+
+  <!-- PWA / 홈화면 추가 -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#5BA86B" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="스티커 나무" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="icon" href="assets/icon.png" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="app-shell">
+    <main id="app"><!-- 뷰가 렌더링되는 영역 --></main>
+
+    <nav id="bottom-nav">
+      <button class="nav-btn" data-nav="create">
+        <span class="nav-ico">＋</span>
+        <span class="nav-label">새 프로젝트</span>
+      </button>
+      <button class="nav-btn" data-nav="library">
+        <span class="nav-ico">▦</span>
+        <span class="nav-label">라이브러리</span>
+      </button>
+      <button class="nav-btn" data-nav="board">
+        <span class="nav-ico">★</span>
+        <span class="nav-label">스티커판</span>
+      </button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
